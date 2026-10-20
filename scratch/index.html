@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Cop - Portfolio || Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">BENJAMIN COP</a>
+        <ul class="nav-links">
+            <li><a href="formation.html">FORMATION</a></li>
+            <li><a href="experience.html">EXPÉRIENCES</a></li>
+            <li><a href="competences.html">COMPÉTENCES</a></li>
+            <li><a href="contact.html">CONTACTS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Accueil Hero section -->
+    <header id="accueil" class="home-hero">
+        <div class="home-hero-container">
+            <div class="home-hero-text">
+                <h1>BENJAMIN COP</h1>
+                <h2>BUT 2 GÉNIE ÉLECTRIQUE ET INFORMATIQUE INDUSTRIELLE</h2>
+                <p>Bienvenue sur mon portfolio. Étudiant en 2ème année de BUT GEII à l'IUT de Bordeaux Gradignan, j'ai
+                    conçu cet espace pour retracer mon parcours technique.</p>
+                <p>Vous trouverez ici une vue d'ensemble de ma Formation, de mes Expériences professionnelles (stages, alternance, CDD), le détail de mes Compétences en électronique
+                    et informatique, ainsi que les Projets concrets que j'ai réalisés. Pour en savoir plus sur mon
+                    profil, rendez-vous dans la section Contacts.</p>
+            </div>
+            <div class="home-hero-image">
+                <img src="vrai_portrait.jpg" alt="Portrait de Benjamin Cop">
+            </div>
+        </div>
+    </header>
+
+    <!-- Formation section -->
+    <section id="formation" class="home-section formation-section">
+        <div class="home-container reverse">
+            <div class="section-text">
+                <h2>MA FORMATION</h2>
+                <p>Ici, je vous détaille mon parcours scolaire depuis le lycée où j'ai commencé à me spécialiser dans
+                    les matières scientifiques ainsi que ma formation actuelle en 2ème année à l'IUT de Bordeaux
+                    Gradignan.</p>
+                <p>Je prépare mon BUT en Génie Électrique et Informatique Industrielle en Électronique et système
+                    embarqué.</p>
+                <a href="formation.html" class="btn-primary" style="margin-top: 2rem;">Voir ma formation détaillée</a>
+            </div>
+            <div class="section-image">
+                <img src="circuit_board_geii.svg" alt="Circuit imprimé GEII Bordeaux"
+                    style="max-width:420px; width:100%; border-radius:14px; box-shadow: 0 10px 30px rgba(45,80,56,0.25);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Grouped Competences section -->
+    <section id="competences-preview" class="home-section competences-section">
+        <div class="home-container">
+            <div class="section-image">
+                <img src="skills_wheel.svg" alt="Roue des compétences"
+                    style="max-width:350px; width:100%; border-radius:50%; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
+            <div class="section-text">
+                <h2>MES COMPÉTENCES</h2>
+                <p>Cette page regroupe l'ensemble de mes savoir-faire techniques, structurés autour des deux piliers de
+                    ma formation : Le Génie Électrique et l'Informatique Industrielle.</p>
+                <p>J'y détaille mes acquis dans des domaines clés tels que l'automatisme, l'électronique de puissance,
+                    la régulation et les systèmes embarqués.</p>
+                <p>Vous y trouverez un inventaire précis des langages de programmation, des environnements de
+                    développement et des logiciels de CAO que je maîtrise au quotidien.</p>
+                <a href="competences.html" class="btn-primary">Voir mes compétences détaillées</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences section preview -->
+    <section id="experiences-preview" class="home-section experiences-section">
+        <div class="home-container reverse">
+            <div class="section-text">
+                <h2>MES EXPÉRIENCES</h2>
+                <p>Découvrez mon parcours professionnel au sein de l'entreprise <strong>AeroDIODE</strong> à Bègles (Stage, CDD et Alternance) dans la production de modules opto-électroniques, ainsi que mes emplois étudiants.</p>
+                <p>J'y présente mes missions techniques concrètes : soudures CMS, fibres optiques, intégration mécanique et caractérisation sur bancs de test (GBF, oscilloscope, spectromètre).</p>
+                <a href="experience.html" class="btn-primary" style="margin-top: 2rem;">Voir mes expériences détaillées</a>
+            </div>
+            <div class="section-image">
+                <img src="AeroDIODE_logo.png" alt="Logo AeroDIODE"
+                    style="max-width: 380px; width: 100%; background: white; padding: 2.5rem 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); object-fit: contain;">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contacts section preview pointer on home page -->
+    <section id="contacts" class="home-section contacts-section">
+        <div class="home-container" style="text-align: center;">
+            <h2 style="font-size: 3rem; color: var(--primary-color); margin-bottom: 2rem;">ENVIE D'EN SAVOIR PLUS ?</h2>
+            <p style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 3rem;">Découvrez comment me contacter
+                et téléchargez mon Curriculum Vitae.</p>
+            <a href="contact.html" class="btn-primary"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1.2rem; padding: 1rem 2.5rem;">
+                <i data-lucide="mail"></i> Vers mes contacts
+            </a>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

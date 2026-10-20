@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet : Challenge de Radiogoniométrie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .project-hero {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8rem 5% 4rem;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .project-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .project-content {
+            padding: 5rem 5%;
+            background-color: var(--bg-color);
+        }
+
+        .project-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover {
+            transform: scale(1.02);
+        }
+
+        .project-details h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-details p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            background-color: rgba(139, 177, 147, 0.2);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(63, 96, 76, 0.1);
+        }
+
+        .documents-section {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: 4rem;
+        }
+
+        .documents-section h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .doc-card {
+            background: var(--bg-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+        }
+
+        .doc-icon {
+            color: var(--accent-color);
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+        }
+
+        .doc-card h4 {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-download:hover {
+            background: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 900px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">BENJAMIN COP</a>
+        <ul class="nav-links">
+            <li><a href="formation.html">FORMATION</a></li>
+            <li><a href="experience.html">EXPÉRIENCES</a></li>
+            <li><a href="competences.html">COMPÉTENCES</a></li>
+            <li><a href="contact.html">CONTACTS</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-hero">
+        <h1>Challenge de Radiogoniométrie</h1>
+        <p>Conception, réalisation et tests d'un système complet de détection et de localisation de balise radio en deuxième année de BUT GEII (Spécialité ESE).</p>
+    </header>
+
+    <section class="project-content">
+        <div class="project-container">
+            <a href="competences.html" class="back-link"><i data-lucide="arrow-left"></i> Retour aux compétences</a>
+
+            <div class="project-grid">
+                <div class="project-details">
+                    <h2>Résumé et Objectifs</h2>
+                    <p>Le Challenge de Radiogoniométrie est un projet majeur de deuxième année (BUT 2). L'objectif est de concevoir un système embarqué capable de déterminer avec précision la direction d'une balise émettrice distante (Radiogoniométrie).</p>
+                    <p>Cela implique une forte pluridisciplinarité : de l'ingénierie des antennes radio pour la captation physique du signal, à l'électronique de conditionnement, jusqu'au traitement logiciel embarqué sur microcontrôleur pour afficher le relèvement directionnel.</p>
+                    
+                    <div class="tech-tags">
+                        <span class="tech-tag">Hautes Fréquences</span>
+                        <span class="tech-tag">Antennes</span>
+                        <span class="tech-tag">Traitement du signal</span>
+                        <span class="tech-tag">STM32 / C</span>
+                        <span class="tech-tag">Routage PCB</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="antenne.png" alt="Antenne réalisée pour le challenge de radiogoniométrie" class="project-image">
+                </div>
+            </div>
+
+            <div class="project-details" style="margin-bottom: 4rem;">
+                <h2>Déroulé du Projet et Compétences Acquises</h2>
+                <div style="display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem;">
+                    
+                    <!-- CONCEVOIR -->
+                    <div id="concevoir" style="background: white; padding: 2.5rem; border-radius: 16px; border-left: 6px solid var(--accent-color); box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                        <h3 style="color: var(--primary-color); display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;"><i data-lucide="pen-tool"></i> Compétence : Concevoir</h3>
+                        <p><strong>Cahier des charges et architecture :</strong> Le projet a débuté par une analyse critique de l'architecture fonctionnelle demandée pour la compétition. J'ai participé à la définition des solutions technologiques, du choix de l'antenne directionnelle jusqu'au microcontrôleur pour le traitement du signal (STM32). Nous avons ensuite rédigé un dossier de conception complet incluant les schémas structurels et les calculs d'adaptation d'impédance.</p>
+                    </div>
+
+                    <!-- VERIFIER -->
+                    <div id="verifier" style="background: white; padding: 2.5rem; border-radius: 16px; border-left: 6px solid var(--accent-color); box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                        <h3 style="color: var(--primary-color); display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;"><i data-lucide="check-circle"></i> Compétence : Vérifier</h3>
+                        <p><strong>Tests et validation :</strong> La validation des performances a nécessité des campagnes de tests rigoureuses en laboratoire. Nous avons mesuré le diagramme de rayonnement de l'antenne en chambre anéchoïque, paramétré l'amplificateur faible bruit (LNA) et vérifié la justesse de l'algorithme de calcul d'angle via des signaux de test injectés artificiellement.</p>
+                    </div>
+
+                    <!-- MAINTENIR -->
+                    <div id="maintenir" style="background: white; padding: 2.5rem; border-radius: 16px; border-left: 6px solid var(--accent-color); box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                        <h3 style="color: var(--primary-color); display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;"><i data-lucide="wrench"></i> Compétence : Maintenir</h3>
+                        <p><strong>Fiabilité et corrections :</strong> Au fil des essais en conditions réelles, des ajustements ont du être opérés sur les étages de filtrage RF pour éviter la saturation du récepteur. J'ai documenté ces procédures de maintenance corrective et optimisé la robustesse mécanique des connexions coaxiales pour résister aux manipulations sur le terrain.</p>
+                    </div>
+
+                    <!-- IMPLANTER -->
+                    <div id="implanter" style="background: white; padding: 2.5rem; border-radius: 16px; border-left: 6px solid var(--accent-color); box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                        <h3 style="color: var(--primary-color); display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;"><i data-lucide="circuit-board"></i> Compétence : Implanter (ESE)</h3>
+                        <p><strong>Fabrication et déploiement :</strong> La concrétisation du système a nécessité le routage industriel du PCB sous Altium, le brasage fin des composants CMS (amplificateurs RF, STM32) et le déploiement final du code C embarqué. Le système complet a été installé sur un mât rotatif pour la compétition finale de radiogoniométrie.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="documents-section">
+                <h3>Documents Techniques Associés</h3>
+                <div class="docs-grid">
+                    <!-- Doc Cahier des charges -->
+                    <div class="doc-card">
+                        <i data-lucide="file-text" class="doc-icon"></i>
+                        <h4>Cahier des Charges</h4>
+                        <p>Document définissant les contraintes fonctionnelles, les normes HF à respecter et les objectifs de performances du challenge.</p>
+                        <a href="CDR-CDC v1-4-1.pdf" download="Cahier_des_Charges_Radiogoniometrie.pdf" class="btn-download">
+                            <i data-lucide="download"></i> Télécharger le PDF
+                        </a>
+                    </div>
+
+                    <!-- Doc Dossier de conception -->
+                    <div class="doc-card">
+                        <i data-lucide="file-cog" class="doc-icon"></i>
+                        <h4>Dossier de Conception</h4>
+                        <p>Dossier technique incluant les choix de solutions, les calculs de dimensionnement, les schémas structurels et algorithmiques.</p>
+                        <a href="DDC_EQ109_V2.pdf" download="Dossier_Conception_Radiogoniometrie.pdf" class="btn-download">
+                            <i data-lucide="download"></i> Télécharger le PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Init lucide icons -->
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>

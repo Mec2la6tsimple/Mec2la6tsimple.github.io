@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Cop - Portfolio || Compétences</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">BENJAMIN COP</a>
+        <ul class="nav-links">
+            <li><a href="formation.html">FORMATION</a></li>
+            <li><a href="experience.html">EXPÉRIENCES</a></li>
+            <li><a href="competences.html" class="active">COMPÉTENCES</a></li>
+            <li><a href="contact.html">CONTACTS</a></li>
+        </ul>
+    </nav>
+
+    <header id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>MES COMPÉTENCES</h1>
+            <p>Découvrez mon savoir-faire technique structuré autour du BUT GEII, avec des détails précis sur chaque domaine et les projets associés.</p>
+        </div>
+    </header>
+
+    <section id="competences" class="skills-section">
+        <div class="container">
+            
+            <!-- Skill 1: CONCEVOIR -->
+            <div class="skill-accordion">
+                <button class="accordion-header" aria-expanded="false" data-category="concevoir">
+                    <div class="skill-title">
+                        <i data-lucide="pen-tool"></i>
+                        <h2>COMPÉTENCE CONCEVOIR</h2>
+                    </div>
+                    <i data-lucide="chevron-down" class="chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="sub-skills-grid">
+                        
+                        <div class="sub-skill-card">
+                            <div class="card-header">
+                                <span class="badge">C.1</span>
+                                <h3>J'identifie les fonctions demandées</h3>
+                            </div>
+                            <p class="description">Analyse de l'architecture fonctionnelle sans solution technique pré-définie à la lecture d'un cahier des charges.</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="projet_radiogoniometrie.html#concevoir" class="btn-project"><i data-lucide="folder"></i> Challenge De Radiogoniometrie (Cahier des charges)</a>
+                            </div>
+                        </div>
+
+                        <div class="sub-skill-card">
+                            <div class="card-header">
+                                <span class="badge">C.2</span>
+                                <h3>Je propose une solution technique</h3>
+                            </div>
+                            <p class="description">Recherche et sélection de composants pour répondre à une fonction spécifique du système matériel ou logiciel.</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="#" class="btn-project"><i data-lucide="folder"></i> Projet Robot SUMO (Dimensionnement & Kicad)</a>
+                            </div>
+                        </div>
+
+                        <div class="sub-skill-card">
+                            <div class="card-header">
+                                <span class="badge">C.3</span>
+                                <h3>J'affine une solution technique</h3>
+                            </div>
+                            <p class="description">Validation de la solution en s'appuyant sur un maquettage numérique et/ou matériel (simulation Proteus, test sur plaque d'essai).</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="#" class="btn-project"><i data-lucide="folder"></i> Commande d'un bras manipulateur (Arduino)</a>
+                            </div>
+                        </div>
+
+                        <div class="sub-skill-card">
+                            <div class="card-header">
+                                <span class="badge">C.4</span>
+                                <h3>Je rédige un dossier de conception</h3>
+                            </div>
+                            <p class="description">Rédaction d'un dossier de conception et de fabrication complet incluant nomenclatures, schémas, et routages.</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="#" class="btn-project"><i data-lucide="folder"></i> Thermomètre numérique (Étude & Réalisation)</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 2: VERIFIER -->
+            <div class="skill-accordion">
+                <button class="accordion-header" aria-expanded="false" data-category="verifier">
+                    <div class="skill-title">
+                        <i data-lucide="check-circle"></i>
+                        <h2>COMPÉTENCE VÉRIFIER</h2>
+                    </div>
+                    <i data-lucide="chevron-down" class="chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="sub-skills-grid">
+                        
+                        <div class="sub-skill-card">
+                            <div class="card-header">
+                                <span class="badge">V.1</span>
+                                <h3>J'applique, j'élabore, je rédige une procédure d'essais</h3>
+                            </div>
+                            <p class="description">Mise en place de tests systématiques pour valider le fonctionnement normal du système face aux spécifications fonctionnelles.</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="projet_radiogoniometrie.html#verifier" class="btn-project"><i data-lucide="folder"></i> Tests de fonctionnement (Challenge De Radiogoniometrie)</a>
+                            </div>
+                        </div>
+
+                        <div class="sub-skill-card">
+                            <div class="card-header">
+                                <span class="badge">V.2</span>
+                                <h3>J'identifie et corrige les non-conformités</h3>
+                            </div>
+                            <p class="description">Analyse des erreurs sur un prototype (court-circuit, erreurs de code) et mise en place d'actions correctives efficaces.</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="#" class="btn-project"><i data-lucide="folder"></i> Débuggage et soudures (Bras Manipulateur)</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 3: MAINTENIR -->
+            <div class="skill-accordion">
+                <button class="accordion-header" aria-expanded="false" data-category="maintenir">
+                    <div class="skill-title">
+                        <i data-lucide="wrench"></i>
+                        <h2>COMPÉTENCE MAINTENIR</h2>
+                    </div>
+                    <i data-lucide="chevron-down" class="chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="sub-skills-grid">
+
+                        <div class="sub-skill-card">
+                            <div class="card-header">
+                                <span class="badge">M.1</span>
+                                <h3>J'applique une opération de maintenance</h3>
+                            </div>
+                            <p class="description">Réalisation d'opérations de maintenance préventive, corrective ou améliorative directement sur un système ou process.</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="projet_radiogoniometrie.html#maintenir" class="btn-project"><i data-lucide="folder"></i> Processus de maintenance (Challenge De Radiogoniometrie)</a>
+                            </div>
+                        </div>
+
+                        <div class="sub-skill-card">
+                            <div class="card-header">
+                                <span class="badge">M.2</span>
+                                <h3>Je rédige la procédure de maintenance</h3>
+                            </div>
+                            <p class="description">Formalisation des stratégies de maintenance (préventive, corrective, améliorative) pour assurer la durée de vie globale du système.</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="#" class="btn-project"><i data-lucide="folder"></i> Rédaction de documents techniques (Robot SUMO)</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Removed INTEGRER and INSTALLER per user request -->
+
+            <!-- Skill 6: IMPLANTER (ESE) -->
+            <div class="skill-accordion">
+                <button class="accordion-header" aria-expanded="false" data-category="implanter">
+                    <div class="skill-title">
+                        <i data-lucide="circuit-board"></i>
+                        <h2>COMPÉTENCE IMPLANTER (ESE)</h2>
+                    </div>
+                    <i data-lucide="chevron-down" class="chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="sub-skills-grid">
+
+                        <div class="sub-skill-card">
+                            <div class="card-header"><span class="badge">I.3.1</span><h3>J'exécute la fabrication, l'installation, etc.</h3></div>
+                            <p class="description">Brasage CMS de composants, tests électriques sur PCB nus ou équipés et flashage du microcontrôleur embarqué.</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="#" class="btn-project"><i data-lucide="folder"></i> Soudure et fabrication (Thermomètre)</a>
+                            </div>
+                        </div>
+
+                        <div class="sub-skill-card">
+                            <div class="card-header"><span class="badge">I.3.2</span><h3>Je prouve la conformité du système</h3></div>
+                            <p class="description">Vérification de la CEM (Compatibilité Électro-Magnétique), validation thermique et logicielle complète du système embarqué.</p>
+                            <div class="project-link">
+                                <h4>Projet associé :</h4>
+                                <a href="projet_radiogoniometrie.html#implanter" class="btn-project"><i data-lucide="folder"></i> Implantation sur site (Challenge De Radiogoniometrie)</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Init lucide icons -->
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

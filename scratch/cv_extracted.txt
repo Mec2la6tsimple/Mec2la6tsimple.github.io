@@ -1,0 +1,75 @@
+C u r i e u x
+A  l ' é c o u t e
+A i m e  r é s o u d r e  d e s  p r o b l è m e s
+C o n s c i e n c e  p r o f e s s i o n n e l l e
+O r g a n i s é
+E X P E R I E N C E  P R O F E S S I O N N E L L E  
+B e n j a m i n  
+C o p
+J u i n  2 0 2 3 Baccalauréat général  ,  Spécialités Mathématiques,
+Physique-Chimie, option Maths Expert, Mention Bien
+Lycée HOCHE, Versailles (78)
+0 4  j a n v i e r  2 0 0 5
+0 6  5 1  3 6  5 4  6 6
+b e n j a m i n . c o p @ e t u . u - b o r d e a u x . f r
+1 7  r u e  d e  B u d o s ,  B o r d e a u x  ( 3 3 )
+P R O F I L
+E X P É R I E N C E S
+2019
+Stage d’observation - Secteur informatique/commercial
+Thalès - Gennevilliers (92)
+Découverte des activités technologiques et commerciales.
+F O R M A T I O N
+E t u d i a n t  e n  2 è m e  a n n é e  d e  B U T  G E I I
+L A N G U E S
+2 0 2 3  -  2 0 2 5
+Bachelor Universitaire de Technologie GEII, 1ère et
+2ème année
+IUT de Vélizy, UVSQ, Vélizy-Villacoublay (78)
+A n g l a i s  :  B 2
+E s p a g n o l  :  B 1
+Q U A L I T É S
+  Juillet - août   2023                 
+Hôte de caisse, Carl’s Jr, Vélizy-Villacoublay (78)  
+Caisse, Relation clientèle, Gestion d'inventaire
+C E N T R E S  D ’ I N T E R Ê T
+S p o r t  :
+N a t a t i o n  ( n i v e a u  c o m p é t i t i o n )
+G o l f  
+P l o n g é e  s o u s  m a r i n e  
+M u s i q u e  :
+P r a t i q u e  d e  l a  g u i t a r e
+P r a t i q u e  d u  p i a n o
+P e r m i s  B  (  E n  c o u r s )
+Novembre 2024  
+- Avril 2025
+Équipier polyvalent, Big Fernand, Vélizy-Villacoublay (78)
+Caisse  
+Service à table, préparation de commandes
+Gestion d'inventaire
+Plonge/nettoyage
+2 0 2 5  -  e n  c o u r s
+B a c h e l o r  U n i v e r s i t a i r e  d e  T e c h n o l o g i e  G E I I ,  2 è m e
+a n n é e
+U n i v e r s i t é  d e  B o r d e a u x ,  G r a d i g n a n  ( 3 3 )
+E X P E R I E N C E  D E  F O R M A T I O N  
+Projet BUT1
+Etude et réalisation d'un thermomètre numérique en technologie traversante
+missions : soudure, utilisation de kicad, étude de datasheet, dimensionnement  
+Acquis : soudure, étude de composants, logiciels, calculs
+Robot avec suivit de ligne  
+missions : création selon cahier des   charges, étude de capteurs, code  
+Acquis : language C, Python, respects des dates, cablâge
+Projet BUT2
+Commande d’un bras manipulateur
+missions : soudure, dimensionnement, codage Arduino, étude de datasheet
+Acquis : soudure, étude de composants, logiciels, calculs
+Acquisition de mesures avec une carte Sleepy Bee + Affichage sur Raspberry pi
+missions : création d’une interface graphique, aquisition de signaux radar
+Acquis : utilisation environnement Raspberry, Sleepybee, communication
+IUT de Vélizy :
+IUT de Vélizy :
+Projet Robot SUMO
+missions : soudure, dimensionnement, codage Arduino, Kicad
+Acquis : Création d’une carte électronique, codage Arduino, rédaction de
+documents techniques

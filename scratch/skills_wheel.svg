@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <!-- Arrière-plan transparent -->
+  <rect width="600" height="600" fill="transparent"/>
+
+  <g transform="translate(300, 300)">
+    <!-- Cercle central Rouge "BUT GEII" -->
+    <circle cx="0" cy="0" r="75" fill="#ee1c25" stroke="#4a151b" stroke-width="1"/>
+    <text x="0" y="8" text-anchor="middle" font-family="'Arial', sans-serif" font-weight="bold" font-size="22" fill="#ffffff">BUT GEII</text>
+
+    <!-- Les 4 lignes fines grises qui partent en diagonale au centre -->
+    <line x1="-100" y1="-100" x2="-70" y2="-70" stroke="#888" stroke-width="1"/>
+    <line x1="100" y1="-100" x2="70" y2="-70" stroke="#888" stroke-width="1"/>
+    <line x1="100" y1="100" x2="70" y2="70" stroke="#888" stroke-width="1"/>
+    <line x1="-100" y1="100" x2="-70" y2="70" stroke="#888" stroke-width="1"/>
+
+    <!-- Les secteurs de l'anneau => Rayon interne = 100, Externe = 200 -->
+    <!-- Secteur 1 : Haut Gauche (-180° à -90°) - CONCEVOIR (Rouge vif) -->
+    <path d="M -100 0 A 100 100 0 0 1 0 -100 L 0 -190 A 190 190 0 0 0 -190 0 Z" fill="#ee1c25" stroke="#ffffff" stroke-width="6"/>
+
+    <!-- Secteur 2 : Haut Droite (-90° à 0°) - VÉRIFIER (Pêche clair) -->
+    <path d="M 0 -100 A 100 100 0 0 1 100 0 L 190 0 A 190 190 0 0 0 0 -190 Z" fill="#fdb883" stroke="#ffffff" stroke-width="6"/>
+
+    <!-- Secteur 3 : Bas Droite (0° à 90°) - MAINTENIR (Jaune) -->
+    <path d="M 100 0 A 100 100 0 0 1 0 100 L 0 190 A 190 190 0 0 0 190 0 Z" fill="#fddb00" stroke="#ffffff" stroke-width="6"/>
+
+    <!-- Secteur 4 : Bas Gauche (90° à 180°) - IMPLANTER (Vert) -->
+    <path d="M 0 100 A 100 100 0 0 1 -100 0 L -190 0 A 190 190 0 0 0 0 190 Z" fill="#009c48" stroke="#ffffff" stroke-width="6"/>
+  </g>
+
+  <!-- Ajouter les textes circulaires (R = 140) -->
+  <!-- Pour éviter totalement les problèmes de textPath (qui inverse ou décale le texte), 
+       je vais ajuster les angles de départ et de fin des chemins pour qu'ils soient précis,
+       ET utiliser une rotation groupée pour positionner le texte facilement au centre de l'arc ! -->
+  <!-- Un arc parfait de 90° centré au milieu du quartier, et le texte centré dessus. -->
+
+  <defs>
+    <!-- Chemin centré en HAUT. (de -45° à 45°, Rayon=140)
+         Pour avoir le bout de l'arc bien centré sur l'axe Y (0° localement), 
+         M -x, -y -> A r r 0 0 1  x, -y  (x=140*sin(45)=99, y=140*cos(45)=99) -->
+    <path id="txt-arc-top" d="M 190 201 A 140 140 0 0 1 410 201"/>
+    
+    <!-- Chemin centré en BAS.  
+         Pour que le texte soit à l'endroit (tête en haut), on doit tracer ce chemin de Gauche à Droite. 
+         (de -45° à +45° par rapport à l'axe du bas). -->
+    <path id="txt-arc-bottom" d="M 190 399 A 140 140 0 0 0 410 399"/>
+  </defs>
+
+  <!-- 1. CONCEVOIR (-135° = Haut Gauche) -->
+  <!-- On prend le chemin "Haut", on le déplace à 300,300, et on le tourne de -45° -->
+  <g transform="translate(300, 300) rotate(-45) translate(-300, -300)">
+    <text font-family="'Arial', sans-serif" font-weight="bold" font-size="18">
+      <textPath href="#txt-arc-top" startOffset="50%" text-anchor="middle" fill="#000000">Compétence CONCEVOIR</textPath>
+    </text>
+  </g>
+
+  <!-- 2. VÉRIFIER (-45° = Haut Droite) -->
+  <!-- On prend le chemin "Haut", on le tourne de +45° -->
+  <g transform="translate(300, 300) rotate(45) translate(-300, -300)">
+    <text font-family="'Arial', sans-serif" font-weight="bold" font-size="18">
+      <textPath href="#txt-arc-top" startOffset="50%" text-anchor="middle" fill="#000000">Compétence VÉRIFIER</textPath>
+    </text>
+  </g>
+
+  <!-- 3. MAINTENIR (+45° = Bas Droite) -->
+  <!-- On prend le chemin "Bas", on le tourne de -45° 
+       Comme le chemin "bottom" est déjà en bas (à +90°), le tourner de -45° l'amène à +45° ! -->
+  <g transform="translate(300, 300) rotate(-45) translate(-300, -300)">
+    <text font-family="'Arial', sans-serif" font-weight="bold" font-size="18">
+      <textPath href="#txt-arc-bottom" startOffset="50%" text-anchor="middle" fill="#000000">Compétence MAINTENIR</textPath>
+    </text>
+  </g>
+
+  <!-- 4. IMPLANTER (+135° = Bas Gauche) -->
+  <!-- On prend le chemin "Bas", on le tourne de +45° -->
+  <g transform="translate(300, 300) rotate(45) translate(-300, -300)">
+    <text font-family="'Arial', sans-serif" font-weight="bold" font-size="18">
+      <textPath href="#txt-arc-bottom" startOffset="50%" text-anchor="middle" fill="#000000">Compétence IMPLANTER</textPath>
+    </text>
+
+  </g>
+
+  <!-- FINITIONS -->
+  <g transform="translate(300, 300)" fill="none" stroke-width="3">
+    <!-- Arc rouge -->
+    <path d="M -205 0 A 205 205 0 0 1 0 -205" stroke="#ee1c25" />
+    <!-- Arc pêche -->
+    <path d="M 0 -205 A 205 205 0 0 1 205 0" stroke="#fdb883" />
+    <!-- Arc jaune -->
+    <path d="M 205 0 A 205 205 0 0 1 0 205" stroke="#fddb00" />
+    <!-- Arc vert -->
+    <path d="M 0 205 A 205 205 0 0 1 -205 0" stroke="#009c48" />
+  </g>
+
+</svg>

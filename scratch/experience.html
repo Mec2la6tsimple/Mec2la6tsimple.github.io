@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Cop - Portfolio || Expériences</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .exp-header {
+            text-align: center;
+            padding: 5rem 5% 3rem;
+            background-color: var(--bg-color);
+        }
+
+        .exp-header h1 {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .exp-header p {
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .exp-section {
+            padding: 0 5% 6rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Rubrique Info Entreprise (AeroDIODE) */
+        .company-info-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 3rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+            border: 2px solid rgba(63, 96, 76, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-info-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .company-brand {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .company-icon-box {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-color);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .company-brand h2 {
+            font-size: 2.4rem;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .company-brand .tagline {
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .company-badges {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .badge-iso {
+            background-color: #f2f7f4;
+            color: #275438;
+            border: 1px solid #b7d6c3;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .badge-location {
+            background-color: #f7f9fa;
+            color: #3b5063;
+            border: 1px solid #c9d7e3;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .company-desc {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+        }
+
+        .company-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed rgba(63, 96, 76, 0.15);
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+        }
+
+        .highlight-item i {
+            color: var(--accent-color);
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .highlight-item h4 {
+            font-size: 1.05rem;
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .highlight-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Chronologie des 3 Contrats */
+        .timeline-header-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin: 4rem 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .timeline-container {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .timeline-container::before {
+            content: "";
+            position: absolute;
+            left: 12px;
+            top: 10px;
+            bottom: 30px;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary-color) 0%, var(--accent-color) 70%, rgba(139, 177, 147, 0.2) 100%);
+            border-radius: 3px;
+        }
+
+        .contract-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 2px solid rgba(63, 96, 76, 0.08);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .contract-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        /* Timeline Dot */
+        .contract-card::before {
+            content: "";
+            position: absolute;
+            left: -2.5rem;
+            top: 2.8rem;
+            transform: translateX(-50%);
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: white;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(63, 96, 76, 0.15);
+            z-index: 2;
+        }
+
+        .contract-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .contract-title-group h3 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 0.4rem;
+        }
+
+        .contract-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .contract-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .badge-contract {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1.2rem;
+            border-radius: 20px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .badge-stage {
+            background-color: #e8f3ed;
+            color: #2c593b;
+            border: 1px solid #b8dcbf;
+        }
+
+        .badge-cdd {
+            background-color: #fbf1e6;
+            color: #8c5218;
+            border: 1px solid #f2d4b6;
+        }
+
+        .badge-alternance {
+            background-color: #eef1f8;
+            color: #27497d;
+            border: 1px solid #c2d2ea;
+        }
+
+        .contract-summary {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Bouton "Plus de détails" */
+        .btn-toggle-details {
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            border: 1.5px solid rgba(63, 96, 76, 0.2);
+            padding: 0.75rem 1.6rem;
+            border-radius: 25px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-toggle-details:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(63, 96, 76, 0.2);
+        }
+
+        .btn-toggle-details i.chevron {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-toggle-details.active i.chevron {
+            transform: rotate(180deg);
+        }
+
+        /* Bloc Détails Dépliable */
+        .contract-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, opacity 0.3s ease;
+            opacity: 0;
+            border-top: 1px solid transparent;
+        }
+
+        .contract-details.open {
+            max-height: 2500px;
+            opacity: 1;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed rgba(63, 96, 76, 0.2);
+        }
+
+        .details-heading {
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .missions-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .missions-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .missions-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-color);
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        /* Tags / Compétences */
+        .contract-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .contract-tag {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 0.4rem 0.95rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        /* Emplacements pour les images */
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .image-slot {
+            background: #faf8f5;
+            border: 2px dashed #c9d6ce;
+            border-radius: 14px;
+            padding: 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 190px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-slot:hover {
+            border-color: var(--primary-color);
+            background: #f4f8f5;
+        }
+
+        .image-slot i {
+            color: var(--accent-color);
+            margin-bottom: 0.6rem;
+        }
+
+        .image-slot-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .image-slot-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Si une balise img est placée dans l'emplacement */
+        .image-slot img {
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+            max-height: 260px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .image-slot figcaption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* Section Autres Expériences */
+        .other-exp-section {
+            margin-top: 5rem;
+            padding-top: 3rem;
+            border-top: 2px solid rgba(63, 96, 76, 0.1);
+        }
+
+        .other-exp-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .simple-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .simple-card-content h4 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .simple-card-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .exp-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .company-info-card, .contract-card {
+                padding: 1.8rem 1.5rem;
+            }
+
+            .timeline-container {
+                padding-left: 1.8rem;
+            }
+
+            .contract-card::before {
+                left: -1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">BENJAMIN COP</a>
+        <ul class="nav-links">
+            <li><a href="formation.html">FORMATION</a></li>
+            <li><a href="experience.html" class="active">EXPÉRIENCES</a></li>
+            <li><a href="competences.html">COMPÉTENCES</a></li>
+            <li><a href="contact.html">CONTACTS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="exp-header">
+        <h1>EXPÉRIENCES PROFESSIONNELLES</h1>
+        <p>Retrouvez mon parcours technique au sein de l'entreprise <strong>AeroDIODE</strong>, de mon stage initial jusqu'à mon alternance, ainsi que mes emplois complémentaires.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="exp-section">
+
+        <!-- ============================================================ -->
+        <!-- 1. RUBRIQUE INFO : PRÉSENTATION DE L'ENTREPRISE AERODIODE    -->
+        <!-- ============================================================ -->
+        <section class="company-info-card">
+            <div class="company-header">
+                <div class="company-brand">
+                    <img src="AeroDIODE_logo.png" alt="Logo AeroDIODE" style="height: 48px; width: auto; object-fit: contain;">
+                    <div>
+                        <span class="tagline" style="display: block; font-size: 1.05rem;">Photonique & Électronique Optique de Précision</span>
+                    </div>
+                </div>
+                <div class="company-badges">
+                    <span class="badge-iso">
+                        <i data-lucide="shield-check"></i> Certifiée ISO 9001
+                    </span>
+                    <span class="badge-location">
+                        <i data-lucide="map-pin"></i> Bègles (33)
+                    </span>
+                </div>
+            </div>
+
+            <p class="company-desc">
+                Implantée à <strong>Bègles</strong>, au cœur de l'écosystème technologique et photonique de la métropole bordelaise, <strong>AeroDIODE</strong> est une entreprise industrielle spécialisée dans le développement et la fabrication de composants électroniques et d'instruments opto-électroniques de pointe. Elle conçoit notamment des drivers de diodes laser haute vitesse, des générateurs d'impulsions ultracourtes, des modules de synchronisation et des systèmes fibrés utilisés dans les laboratoires de recherche et les industries laser les plus exigeantes à l'échelle internationale.
+            </p>
+
+            <div class="company-highlights">
+                <div class="highlight-item">
+                    <i data-lucide="award"></i>
+                    <div>
+                        <h4>Management de la Qualité</h4>
+                        <p>Entreprise certifiée <strong>ISO 9001</strong> garantissant la traçabilité et la rigueur des processus de production.</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i data-lucide="zap"></i>
+                    <div>
+                        <h4>Haute Technologie & Précision</h4>
+                        <p>Fabrication de modules opto-électroniques, soudure CMS fine et soudure de fibre optique de haute technicité.</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i data-lucide="activity"></i>
+                    <div>
+                        <h4>Métrologie & Bancs de Test</h4>
+                        <p>Validation rigoureuse des produits à l'aide d'instruments de laboratoire (GBF, oscilloscope, spectromètre).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 2. CHRONOLOGIE DES 3 CONTRATS CHEZ AERODIODE                 -->
+        <!-- ============================================================ -->
+        <h2 class="timeline-header-title">
+            <i data-lucide="git-commit"></i> Mon Parcours chez AeroDIODE : 3 Contrats Successifs
+        </h2>
+
+        <div class="timeline-container">
+
+            <!-- ---------------------------------------------------- -->
+            <!-- CONTRAT 1 : LE STAGE (4 Mai - 10 Juillet)            -->
+            <!-- ---------------------------------------------------- -->
+            <article class="contract-card">
+                <div class="contract-card-header">
+                    <div class="contract-title-group">
+                        <h3>Travaux autour de la production des modules opto-électroniques</h3>
+                        <div class="contract-meta">
+                            <span><i data-lucide="calendar"></i> <strong>4 mai – 10 juillet</strong></span>
+                            <span><i data-lucide="building-2"></i> AeroDIODE (Bègles)</span>
+                            <span><i data-lucide="clock"></i> Stage technique de 2ème année</span>
+                        </div>
+                    </div>
+                    <span class="badge-contract badge-stage">
+                        <i data-lucide="award"></i> Stage
+                    </span>
+                </div>
+
+                <p class="contract-summary">
+                    Stage de 2ème année de BUT GEII centré sur l'assemblage, la soudure de précision, l'intégration et la validation métrologique de modules opto-électroniques haute performance.
+                </p>
+
+                <!-- Bouton pour afficher/masquer les détails -->
+                <button class="btn-toggle-details active" onclick="toggleDetails('details-stage', this)">
+                    <i data-lucide="chevron-down" class="chevron"></i>
+                    <span class="btn-text">Masquer les détails</span>
+                </button>
+
+                <!-- Zone déroulante des détails (ouverte par défaut pour le stage) -->
+                <div id="details-stage" class="contract-details open">
+                    <div class="details-heading">
+                        <i data-lucide="check-circle-2"></i> Missions & Réalisations
+                    </div>
+                    <ul class="missions-list">
+                        <li><strong>Soudures électroniques & changement de composants CMS</strong> : manipulation précise de micro-composants CMS sous loupe binoculaire, retouches et soudures de haute qualité.</li>
+                        <li><strong>Soudure de fibre optique</strong> : préparation, clivage et alignement de fibres optiques pour injection laser.</li>
+                        <li><strong>Intégration mécanique</strong> : assemblage mécanique des boîtiers, gestion thermique et montage soigné des modules opto-électroniques.</li>
+                        <li><strong>Tests et caractérisation des produits</strong> : utilisation quotidienne d'appareils de laboratoire spécialisés (<strong>GBF</strong>, <strong>oscilloscope</strong> haute fréquence et <strong>spectromètre optique</strong>).</li>
+                        <li><strong>Rédaction des rapports de tests</strong> : traçabilité métrologique, consignation rigoureuse des mesures et validation de conformité des produits finis.</li>
+                        <li><strong>Participation aux processus industriels ISO 9001</strong> : initiation et application directe des procédures de management de la qualité propres à une jeune entreprise industrielle certifiée.</li>
+                    </ul>
+
+                    <div class="details-heading">
+                        <i data-lucide="tag"></i> Compétences & Outils Clés
+                    </div>
+                    <div class="contract-tags">
+                        <span class="contract-tag"><i data-lucide="cpu"></i> Soudure CMS</span>
+                        <span class="contract-tag"><i data-lucide="zap"></i> Soudure Fibre Optique</span>
+                        <span class="contract-tag"><i data-lucide="activity"></i> Oscilloscope</span>
+                        <span class="contract-tag"><i data-lucide="radio"></i> GBF</span>
+                        <span class="contract-tag"><i data-lucide="sun"></i> Spectromètre</span>
+                        <span class="contract-tag"><i data-lucide="wrench"></i> Intégration Mécanique</span>
+                        <span class="contract-tag"><i data-lucide="file-text"></i> Rapports de Test</span>
+                        <span class="contract-tag"><i data-lucide="shield-check"></i> Norme ISO 9001</span>
+                    </div>
+
+                    <!-- Emplacements pour les images du stage -->
+                    <div class="details-heading" style="margin-top: 1.5rem;">
+                        <i data-lucide="image"></i> Photos & Illustrations du Stage
+                    </div>
+                    <div class="images-grid">
+                        <!-- Emplacement Photo 1 -->
+                        <div class="image-slot">
+                            <!-- Pour afficher une vraie image, remplacez par : <img src="nom_image.jpg" alt="Description"> -->
+                            <i data-lucide="camera" style="width: 32px; height: 32px;"></i>
+                            <div class="image-slot-title">Poste de Soudure & Assemblage CMS</div>
+                            <div class="image-slot-desc">Emplacement pour photo : soudure CMS sous binoculaire ou soudure de fibre optique.</div>
+                        </div>
+
+                        <!-- Emplacement Photo 2 -->
+                        <div class="image-slot">
+                            <!-- Pour afficher une vraie image, remplacez par : <img src="nom_image.jpg" alt="Description"> -->
+                            <i data-lucide="activity" style="width: 32px; height: 32px;"></i>
+                            <div class="image-slot-title">Banc de Test & Métrologie</div>
+                            <div class="image-slot-desc">Emplacement pour photo : mesures avec GBF, oscilloscope numérique ou spectromètre.</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ---------------------------------------------------- -->
+            <!-- CONTRAT 2 : LE CDD (11 Juillet - 28 Août)            -->
+            <!-- ---------------------------------------------------- -->
+            <article class="contract-card">
+                <div class="contract-card-header">
+                    <div class="contract-title-group">
+                        <h3>Technicien de Production & Contrôle Qualité (CDD)</h3>
+                        <div class="contract-meta">
+                            <span><i data-lucide="calendar"></i> <strong>11 juillet – 28 août</strong></span>
+                            <span><i data-lucide="building-2"></i> AeroDIODE (Bègles)</span>
+                            <span><i data-lucide="clock"></i> Emploi estival technique</span>
+                        </div>
+                    </div>
+                    <span class="badge-contract badge-cdd">
+                        <i data-lucide="briefcase"></i> CDD
+                    </span>
+                </div>
+
+                <p class="contract-summary">
+                    Poursuite directe des missions du stage en autonomie complète durant la période estivale : renfort de production des commandes clients, validation des séries et application stricte des protocoles qualité ISO 9001.
+                </p>
+
+                <!-- Bouton pour afficher/masquer les détails -->
+                <button class="btn-toggle-details" onclick="toggleDetails('details-cdd', this)">
+                    <i data-lucide="chevron-down" class="chevron"></i>
+                    <span class="btn-text">Voir plus de détails</span>
+                </button>
+
+                <!-- Zone déroulante des détails -->
+                <div id="details-cdd" class="contract-details">
+                    <div class="details-heading">
+                        <i data-lucide="check-circle-2"></i> Missions & Responsabilités
+                    </div>
+                    <ul class="missions-list">
+                        <li><strong>Autonomie sur la chaîne de production</strong> : réalisation des séries de modules opto-électroniques avec cadence et précision.</li>
+                        <li><strong>Banc de qualification et de tests</strong> : réalisation systématique des mesures au spectromètre et oscilloscope pour chaque équipement avant emballage.</li>
+                        <li><strong>Gestion de la conformité ISO 9001</strong> : respect scrupuleux des fiches suiveuses et documentation de l'assurance qualité.</li>
+                        <li><strong>Maintenance et étalonnage de premier niveau</strong> des outils et appareils de test.</li>
+                    </ul>
+
+                    <div class="details-heading">
+                        <i data-lucide="tag"></i> Compétences & Outils Clés
+                    </div>
+                    <div class="contract-tags">
+                        <span class="contract-tag"><i data-lucide="check"></i> Autonomie de Production</span>
+                        <span class="contract-tag"><i data-lucide="shield-check"></i> Contrôle Qualité</span>
+                        <span class="contract-tag"><i data-lucide="activity"></i> Métrologie Série</span>
+                        <span class="contract-tag"><i data-lucide="cpu"></i> Boîtiers Opto-électroniques</span>
+                        <span class="contract-tag"><i data-lucide="users"></i> Travail en Équipe Industrielle</span>
+                    </div>
+
+                    <!-- Emplacement pour les images du CDD -->
+                    <div class="details-heading" style="margin-top: 1.5rem;">
+                        <i data-lucide="image"></i> Photos & Illustrations du CDD
+                    </div>
+                    <div class="images-grid">
+                        <div class="image-slot">
+                            <i data-lucide="camera" style="width: 32px; height: 32px;"></i>
+                            <div class="image-slot-title">Modules Opto-Électroniques Assemblés</div>
+                            <div class="image-slot-desc">Emplacement pour photo : vue des produits finis, boîtiers ou intégration mécanique.</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ---------------------------------------------------- -->
+            <!-- CONTRAT 3 : L'ALTERNANCE (15 Septembre - 31 Août 2027)-->
+            <!-- ---------------------------------------------------- -->
+            <article class="contract-card">
+                <div class="contract-card-header">
+                    <div class="contract-title-group">
+                        <h3>Apprenti Concepteur & Technicien Opto-Électronique (Alternance)</h3>
+                        <div class="contract-meta">
+                            <span><i data-lucide="calendar"></i> <strong>15 septembre – 31 août 2027</strong></span>
+                            <span><i data-lucide="building-2"></i> AeroDIODE (Bègles)</span>
+                            <span><i data-lucide="clock"></i> BUT 3 GEII (Électronique & Systèmes Embarqués)</span>
+                        </div>
+                    </div>
+                    <span class="badge-contract badge-alternance">
+                        <i data-lucide="repeat"></i> Alternance
+                    </span>
+                </div>
+
+                <p class="contract-summary">
+                    Contrat d'apprentissage préparé sur le cycle complet de 3ème année de BUT GEII. Approfondissement de l'expertise industrielle, optimisation des bancs de test et contribution active à l'industrialisation des nouveaux modules.
+                </p>
+
+                <!-- Bouton pour afficher/masquer les détails -->
+                <button class="btn-toggle-details" onclick="toggleDetails('details-alternance', this)">
+                    <i data-lucide="chevron-down" class="chevron"></i>
+                    <span class="btn-text">Voir plus de détails</span>
+                </button>
+
+                <!-- Zone déroulante des détails -->
+                <div id="details-alternance" class="contract-details">
+                    <div class="details-heading">
+                        <i data-lucide="check-circle-2"></i> Missions & Objectifs de l'Alternance
+                    </div>
+                    <ul class="missions-list">
+                        <li><strong>Industrialisation et optimisation des méthodes</strong> : participation à l'amélioration continue des bancs de test et des montages opto-électroniques.</li>
+                        <li><strong>Développement et automatisation</strong> : mise en place de scripts et protocoles de mesure pour fluidifier la caractérisation des modules.</li>
+                        <li><strong>Expertise électronique et photonique</strong> : approfondissement de la conception, du routage et du débuggage de circuits dédiés au pilotage de diodes laser.</li>
+                        <li><strong>Suivi qualité ISO 9001</strong> : participation aux revues de processus, traitement des non-conformités et mise à jour de la documentation technique.</li>
+                    </ul>
+
+                    <div class="details-heading">
+                        <i data-lucide="tag"></i> Compétences Développées
+                    </div>
+                    <div class="contract-tags">
+                        <span class="contract-tag"><i data-lucide="cpu"></i> Systèmes Embarqués & Opto-élec</span>
+                        <span class="contract-tag"><i data-lucide="code"></i> Automatisation de Bancs</span>
+                        <span class="contract-tag"><i data-lucide="shield-check"></i> Processus ISO 9001</span>
+                        <span class="contract-tag"><i data-lucide="git-pull-request"></i> Amélioration Continue</span>
+                        <span class="contract-tag"><i data-lucide="layers"></i> R&D & Industrialisation</span>
+                    </div>
+
+                    <!-- Emplacement pour les images de l'Alternance -->
+                    <div class="details-heading" style="margin-top: 1.5rem;">
+                        <i data-lucide="image"></i> Photos & Illustrations de l'Alternance
+                    </div>
+                    <div class="images-grid">
+                        <div class="image-slot">
+                            <i data-lucide="camera" style="width: 32px; height: 32px;"></i>
+                            <div class="image-slot-title">Espace R&D / Banc d'Automatisation</div>
+                            <div class="image-slot-desc">Emplacement pour photo : banc de test automatisé, station de travail ou projet de BUT 3.</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- 3. AUTRES EXPÉRIENCES COMPLÉMENTAIRES                        -->
+        <!-- ============================================================ -->
+        <section class="other-exp-section">
+            <h3 class="other-exp-title">
+                <i data-lucide="briefcase"></i> Autres Expériences & Emplois Étudiants
+            </h3>
+
+            <!-- Big Fernand -->
+            <div class="simple-card">
+                <div class="simple-card-content">
+                    <h4>Équipier Polyvalent — Big Fernand</h4>
+                    <p><i data-lucide="calendar"></i> Novembre 2024 – Avril 2025 | Vélizy-Villacoublay (78)</p>
+                    <p style="margin-top: 0.5rem; color: var(--text-main);">Gestion de caisse, relation client, organisation sous forte affluence et gestion d'inventaire.</p>
+                </div>
+                <span class="badge-contract badge-cdd">CDD</span>
+            </div>
+
+            <!-- Carl's Jr -->
+            <div class="simple-card">
+                <div class="simple-card-content">
+                    <h4>Hôte de Caisse — Carl's Jr</h4>
+                    <p><i data-lucide="calendar"></i> Juillet 2023 – Août 2023 | Vélizy-Villacoublay (78)</p>
+                    <p style="margin-top: 0.5rem; color: var(--text-main);">Accueil client, encaissement, service rapide et respect des standards qualité.</p>
+                </div>
+                <span class="badge-contract badge-cdd">CDD Saisonnier</span>
+            </div>
+
+            <!-- Thalès -->
+            <div class="simple-card">
+                <div class="simple-card-content">
+                    <h4>Stage d'Observation Informatique & Commercial — Thalès</h4>
+                    <p><i data-lucide="calendar"></i> 2019 | Gennevilliers (92)</p>
+                    <p style="margin-top: 0.5rem; color: var(--text-main);">Immersion au sein d'un leader industriel technologique (systèmes d'information et de communication).</p>
+                </div>
+                <span class="badge-contract badge-stage">Stage d'observation</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Script pour déplier/replier les détails et initialiser Lucide -->
+    <script>
+        function toggleDetails(detailsId, button) {
+            const detailsElement = document.getElementById(detailsId);
+            const isCurrentlyOpen = detailsElement.classList.contains('open');
+            const btnText = button.querySelector('.btn-text');
+
+            if (isCurrentlyOpen) {
+                detailsElement.classList.remove('open');
+                button.classList.remove('active');
+                if (btnText) btnText.textContent = "Voir plus de détails";
+            } else {
+                detailsElement.classList.add('open');
+                button.classList.add('active');
+                if (btnText) btnText.textContent = "Masquer les détails";
+            }
+        }
+
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
