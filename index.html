@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benjamin Cop — Portfolio GEII & Opto-Électronique</title>
+  <meta name="description" content="Portfolio d'ingénierie de Benjamin Cop, étudiant en BUT GEII (Électronique et Systèmes Embarqués) à l'IUT de Bordeaux et alternant chez AeroDIODE à Bègles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+  <!-- ============================================================ -->
+  <!-- NAVIGATION BLUEPRINT VERT LASER                             -->
+  <!-- ============================================================ -->
+  <header class="nav">
+    <div class="wrap nav__wrap">
+      <a href="#top" class="nav__logo" aria-label="Benjamin Cop — retour en haut">
+        <span class="p">(</span>b<span class="p">)</span>cop<span class="dot">.</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#profil">profil</a>
+        <a href="#experiences">expériences</a>
+        <a href="#competences">compétences</a>
+        <a href="#projets">projets</a>
+        <a href="#formation">formation</a>
+      </nav>
+
+      <div class="nav__end">
+        <span class="status"><i></i>alternance AeroDIODE</span>
+        <a href="#contact" class="btn-laser">contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================ -->
+    <!-- (00) HERO SECTION & SIMULATION DIODE LASER                   -->
+    <!-- ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="wrap">
+        <div class="hero__meta">
+          <span class="mono">(00) portfolio d'ingénierie photonique — 2026</span>
+          <div class="hero__badges">
+            <span class="status status--iso"><i></i>qualité certifiée · ISO 9001</span>
+            <span class="status"><i></i>BUT GEII · Bordeaux</span>
+          </div>
+        </div>
+
+        <div class="hero__title">
+          <h1 class="hero__line">Benjamin</h1>
+          <h1 class="hero__line hero__line--2">Cop<span class="laser-dot">.</span></h1>
+        </div>
+
+        <div class="hero__bottom">
+          <p class="hero__lead">
+            Étudiant en BUT GEII (<strong>Électronique et Systèmes Embarqués</strong>) à l’IUT de Bordeaux et alternant chez <strong>AeroDIODE</strong> à Bègles. Je conçois, j'assemble et je valide des modules opto-électroniques et de pilotage de diodes laser, de la soudure CMS et fibre optique jusqu'à la métrologie optique sous démarche qualité ISO 9001.
+          </p>
+          <div class="hero__ctas">
+            <a href="#experiences" class="pill">
+              <span class="pill__icon">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg>
+              </span>
+              <span>mon parcours AeroDIODE</span>
+            </a>
+            <a href="../scratch/CV_Portfolio.pdf" target="_blank" rel="noopener" class="ghost">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h12M8 2v7M5 6l3 3 3-3"/></svg>
+              <span>télécharger le CV (PDF)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Simulation Dynamique Diode Laser & Faisceau Photonique -->
+        <div class="laser-hud-card" aria-hidden="true">
+          <canvas class="laser-canvas"></canvas>
+          <div class="laser-hud-footer mono">
+            <span>ÉMETTEUR : <b>DIODE LASER FIBRÉE</b></span>
+            <span class="laser-hud-emission">λ = 1064 nm · IMPULSIONS PICOSECONDES</span>
+            <span class="laser-hud-status">ÉMISSION LASER ACTIVE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ruban technique défilant vert laser -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>AeroDIODE</span><i></i>
+        <span>Diodes Laser</span><i></i>
+        <span>Fibres Optiques</span><i></i>
+        <span>Soudure CMS</span><i></i>
+        <span>Norme ISO 9001</span><i></i>
+        <span>Spectrométrie Optique</span><i></i>
+        <span>Oscilloscope Numérique</span><i></i>
+        <span>GBF</span><i></i>
+        <span>STM32</span><i></i>
+        <span>KiCad PCB</span><i></i>
+        <span>Radiogoniométrie</span><i></i>
+        <span>C / C++</span><i></i>
+        <span>AeroDIODE</span><i></i>
+        <span>Diodes Laser</span><i></i>
+        <span>Fibres Optiques</span><i></i>
+        <span>Soudure CMS</span><i></i>
+        <span>Norme ISO 9001</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- (01) PROFIL & CHIFFRES CLÉS                                 -->
+    <!-- ============================================================ -->
+    <section class="section" id="profil">
+      <div class="wrap">
+        <header class="sh">
+          <span class="sh__l">
+            <span class="sh__ico"><svg viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></span>
+            profil
+          </span>
+          <span class="sh__line"></span>
+          <span class="sh__r">(01)</span>
+        </header>
+
+        <p class="statement">
+          Bachelier au Lycée Hoche à Versailles, formé à l’IUT de Vélizy puis à Bordeaux. Je conçois des cartes électroniques, je pilote des diodes laser et j'assemble des modules opto-électroniques industriels.
+        </p>
+
+        <div class="profil__grid">
+          <figure class="portrait">
+            <img src="../scratch/vrai_portrait.jpg" alt="Portrait de Benjamin Cop">
+            <figcaption class="mono">Benjamin Cop — Technicien Supérieur BUT GEII ESE · AeroDIODE</figcaption>
+          </figure>
+
+          <div class="profil__text">
+            <p class="lead">
+              Spécialisé en <strong>Électronique et Systèmes Embarqués (ESE)</strong>, j'évolue dans un environnement industriel de pointe chez <strong>AeroDIODE</strong>, fabricant de référence de drivers de diodes laser et instruments opto-électroniques de haute précision.
+            </p>
+
+            <!-- Chiffres Clés Animés -->
+            <div class="stats">
+              <div class="stat">
+                <span class="stat__v"><span data-target="3">0</span></span>
+                <span class="stat__l">contrats successifs chez AeroDIODE (Stage, CDD, Alternance)</span>
+              </div>
+              <div class="stat">
+                <span class="stat__v"><span data-target="1064">0</span><small>nm</small></span>
+                <span class="stat__l">longueur d'onde laser et spectrométrie de précision</span>
+              </div>
+              <div class="stat">
+                <span class="stat__v">ISO <span data-target="9001">0</span></span>
+                <span class="stat__l">management de la qualité appliqué en production</span>
+              </div>
+              <div class="stat">
+                <span class="stat__v">B<span data-target="2">0</span></span>
+                <span class="stat__l">anglais technique opérationnel</span>
+              </div>
+            </div>
+
+            <!-- Informations Synthétiques -->
+            <div class="infos">
+              <div class="info">
+                <h3 class="mono">compétences terrain</h3>
+                <ul>
+                  <li>Soudure CMS <span>précision</span></li>
+                  <li>Fibre optique <span>soudure</span></li>
+                  <li>Métrologie <span>Spectro/Oscillo</span></li>
+                </ul>
+              </div>
+              <div class="info">
+                <h3 class="mono">langues</h3>
+                <ul>
+                  <li>Français <span>natif</span></li>
+                  <li>Anglais <span>B2 technique</span></li>
+                  <li>Espagnol <span>B1</span></li>
+                </ul>
+              </div>
+              <div class="info">
+                <h3 class="mono">parcours</h3>
+                <ul>
+                  <li>Lycée Hoche <span>Bac Bien</span></li>
+                  <li>IUT Vélizy <span>BUT 1</span></li>
+                  <li>IUT Bordeaux <span>BUT 2/3</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- (02) EXPÉRIENCES PROFESSIONNELLES (SECTION SOMBRE AERODIODE) -->
+    <!-- ============================================================ -->
+    <section class="section section-dark" id="experiences">
+      <div class="wrap">
+        <header class="sh">
+          <span class="sh__l">
+            <span class="sh__ico"><svg viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></span>
+            expériences en entreprise
+          </span>
+          <span class="sh__line"></span>
+          <span class="sh__r">(02)</span>
+        </header>
+
+        <h2 class="h-lg" style="margin-bottom: 2rem;">AeroDIODE : 3 Contrats de Référence.</h2>
+        <p class="lead" style="color: rgba(247,250,248,0.7); margin-bottom: 3.5rem;">
+          De mon stage technique initial jusqu'à mon alternance de 3<sup>e</sup> année, une progression continue au sein d'une entreprise industrielle de haute technologie certifiée ISO 9001.
+        </p>
+
+        <!-- Fiche Blueprint AeroDIODE -->
+        <div class="company-blueprint">
+          <div class="company-blueprint-header">
+            <div class="company-logo-slot">
+              <img src="../scratch/AeroDIODE_logo.png" alt="Logo AeroDIODE" class="company-logo-img">
+              <div class="company-title">
+                <h3>AeroDIODE</h3>
+                <p>Bègles (33) · Écosystème Photonique & Laser de Bordeaux</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <span class="status status--iso"><i></i>Certifiée ISO 9001</span>
+              <span class="status" style="background: rgba(16,185,129,0.15); color: #34d399; border-color: rgba(52,211,153,0.3);">Photonique & Diodes Laser</span>
+            </div>
+          </div>
+
+          <p class="company-blueprint-desc">
+            AeroDIODE est une entreprise technologique innovante de la métropole bordelaise spécialisée dans la conception et la fabrication de modules et d'instruments opto-électroniques : drivers de diodes laser haute vitesse, générateurs d'impulsions nanoseconde et picoseconde, modules de synchronisation et composants fibrés pour la recherche et l'industrie internationale.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-box">
+              <h4>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--laser-bright)" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>
+                Management Qualité ISO 9001
+              </h4>
+              <p>Traçabilité totale, fiches de suivi de production, fiches suiveuses et procédures de conformité rigoureuses.</p>
+            </div>
+            <div class="feature-box">
+              <h4>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--laser-bright)" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>
+                Fabrication Micro-Électronique
+              </h4>
+              <p>Soudures CMS sous binoculaire, soudure de fibre optique de précision, intégration mécanique et thermique.</p>
+            </div>
+            <div class="feature-box">
+              <h4>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--laser-bright)" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>
+                Métrologie & Caractérisation
+              </h4>
+              <p>Validation sur bancs de test avec générateur de fonctions (GBF), oscilloscope numérique et spectromètre optique.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chronologie des 3 Contrats AeroDIODE -->
+        <div class="timeline-dark">
+
+          <!-- 1. STAGE -->
+          <article class="contract-card-dark">
+            <div class="contract-card-dark-header">
+              <div>
+                <span class="mono" style="color: var(--laser-bright); text-transform: uppercase; font-size: 12px; font-weight: 600;">01 · Stage Technique BUT 2</span>
+                <h3>Travaux autour de la production des modules opto-électroniques</h3>
+                <div class="contract-meta-mono mono">
+                  <span>📅 <strong>4 mai – 10 juillet</strong></span>
+                  <span>📍 AeroDIODE (Bègles)</span>
+                </div>
+              </div>
+              <span class="status" style="background: rgba(16,185,129,0.15); color: #34d399; border-color: rgba(52,211,153,0.3);">Stage</span>
+            </div>
+
+            <p class="contract-lead-p">
+              Immersion au cœur de l'atelier de fabrication : assemblage, soudures électroniques CMS et fibre optique, intégration mécanique et caractérisation métrologique complète des modules.
+            </p>
+
+            <button class="btn-toggle-dark active" onclick="toggleContractDetails('dark-stage-details', this)">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+              <span class="btn-label">Masquer le détail</span>
+            </button>
+
+            <div id="dark-stage-details" class="details-drawer open">
+              <ul class="dark-missions">
+                <li><strong>Soudures électroniques, changement de composants CMS</strong> : manipulation de composants montés en surface sous binoculaire, réparations et modifications de circuits avec haute exigence de propreté.</li>
+                <li><strong>Soudure de fibre optique</strong> : préparation, dénudage, clivage et soudure par fusion de fibres optiques pour couplage laser.</li>
+                <li><strong>Intégration mécanique</strong> : assemblage des boîtiers, gestion thermique, fixation des cartes et visserie de précision.</li>
+                <li><strong>Tests des produits avec utilisation d'appareils de laboratoire</strong> : mesure des signaux au <strong>GBF</strong>, <strong>oscilloscope</strong> haute fréquence et <strong>spectromètre</strong> pour la validation spectrale.</li>
+                <li><strong>Rédaction des rapports de tests</strong> : traçabilité métrologique et consignation des résultats pour chaque module expédié.</li>
+                <li><strong>Participation aux processus certifiés ISO 9001</strong> : respect strict du manuel d'assurance qualité et des instructions de travail de l'entreprise.</li>
+              </ul>
+
+              <div class="dark-tags">
+                <span class="dark-tag">Soudure CMS</span>
+                <span class="dark-tag">Fibre Optique</span>
+                <span class="dark-tag">Intégration Mécanique</span>
+                <span class="dark-tag">GBF & Oscilloscope</span>
+                <span class="dark-tag">Spectromètre</span>
+                <span class="dark-tag">Rapports de Test</span>
+                <span class="dark-tag">ISO 9001</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. CDD -->
+          <article class="contract-card-dark">
+            <div class="contract-card-dark-header">
+              <div>
+                <span class="mono" style="color: var(--laser-bright); text-transform: uppercase; font-size: 12px; font-weight: 600;">02 · Renfort Estival</span>
+                <h3>Technicien de Production & Contrôle Qualité (CDD)</h3>
+                <div class="contract-meta-mono mono">
+                  <span>📅 <strong>11 juillet – 28 août</strong></span>
+                  <span>📍 AeroDIODE (Bègles)</span>
+                </div>
+              </div>
+              <span class="status" style="background: rgba(16,185,129,0.15); color: #34d399; border-color: rgba(52,211,153,0.3);">CDD</span>
+            </div>
+
+            <p class="contract-lead-p">
+              Poursuite directe des missions en pleine autonomie : gestion du flux de production des commandes clients, validation des séries d'instruments et contrôle qualité rigoureux.
+            </p>
+
+            <button class="btn-toggle-dark" onclick="toggleContractDetails('dark-cdd-details', this)">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+              <span class="btn-label">Voir le détail des missions</span>
+            </button>
+
+            <div id="dark-cdd-details" class="details-drawer">
+              <ul class="dark-missions">
+                <li><strong>Autonomie complète sur bancs de test</strong> : qualification unitaire de chaque module opto-électronique avant conditionnement.</li>
+                <li><strong>Rythme de production et cadence</strong> : maintien des standards de qualité élevés sur des volumes accrus.</li>
+                <li><strong>Assurance qualité ISO 9001</strong> : renseignement des fiches suiveuses et validation de non-régression technique.</li>
+                <li><strong>Maintenance de premier niveau</strong> des outillages de soudure et de contrôle optique.</li>
+              </ul>
+              <div class="dark-tags">
+                <span class="dark-tag">Autonomie de Production</span>
+                <span class="dark-tag">Contrôle Qualité</span>
+                <span class="dark-tag">Flux de Commandes</span>
+                <span class="dark-tag">Fiches Suiveuses</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. ALTERNANCE -->
+          <article class="contract-card-dark">
+            <div class="contract-card-dark-header">
+              <div>
+                <span class="mono" style="color: var(--laser-bright); text-transform: uppercase; font-size: 12px; font-weight: 600;">03 · Contrat d'Apprentissage BUT 3</span>
+                <h3>Apprenti Concepteur & Technicien Systèmes Opto-Électroniques</h3>
+                <div class="contract-meta-mono mono">
+                  <span>📅 <strong>15 septembre – 31 août 2027</strong></span>
+                  <span>📍 AeroDIODE (Bègles)</span>
+                </div>
+              </div>
+              <span class="status" style="background: rgba(16,185,129,0.22); color: #6ee7b7; border-color: rgba(110,231,183,0.4);">Alternance</span>
+            </div>
+
+            <p class="contract-lead-p">
+              Cycle complet de 3<sup>e</sup> année de BUT GEII : montée en compétences sur l'industrialisation, optimisation et automatisation des bancs de test, support R&D et amélioration continue.
+            </p>
+
+            <button class="btn-toggle-dark" onclick="toggleContractDetails('dark-alt-details', this)">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+              <span class="btn-label">Voir le détail des missions</span>
+            </button>
+
+            <div id="dark-alt-details" class="details-drawer">
+              <ul class="dark-missions">
+                <li><strong>Industrialisation et amélioration des méthodes</strong> : standardisation des montages et simplification des procédures de validation.</li>
+                <li><strong>Automatisation des mesures</strong> : écriture de scripts de test pour réduire le temps de caractérisation spectrale et temporelle.</li>
+                <li><strong>Participation aux revues de qualité</strong> : traitement des anomalies, actions correctives et audits internes ISO 9001.</li>
+                <li><strong>Veille et R&D</strong> : participation aux tests de nouveaux prototypes électroniques de pilotage de diodes laser.</li>
+              </ul>
+              <div class="dark-tags">
+                <span class="dark-tag">Industrialisation</span>
+                <span class="dark-tag">Automatisation Bancs</span>
+                <span class="dark-tag">Systèmes Embarqués</span>
+                <span class="dark-tag">Audit ISO 9001</span>
+                <span class="dark-tag">Amélioration Continue</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- (03) COMPÉTENCES DU BUT GEII (CONCEVOIR, VÉRIFIER, MAINTENIR)-->
+    <!-- ============================================================ -->
+    <section class="section" id="competences">
+      <div class="wrap">
+        <header class="sh">
+          <span class="sh__l">
+            <span class="sh__ico"><svg viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></span>
+            référentiel de compétences
+          </span>
+          <span class="sh__line"></span>
+          <span class="sh__r">(03)</span>
+        </header>
+
+        <h2 class="h-lg" style="margin-bottom: 1.5rem;">Concevoir, vérifier, maintenir.</h2>
+        <p class="lead">Les trois grands piliers académiques du BUT GEII, éprouvés sur des réalisations concrètes en laboratoire et en entreprise.</p>
+
+        <div class="offers">
+          <!-- C1 : Concevoir -->
+          <article class="offer">
+            <div class="offer__top">
+              <div class="circ">
+                <svg viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg>
+              </div>
+              <span class="offer__code">C1</span>
+            </div>
+            <h3>Concevoir</h3>
+            <p>Conception de cartes électroniques et de systèmes embarqués, du cahier des charges jusqu'au routage PCB et au code sur microcontrôleur.</p>
+            <ul class="offer__links">
+              <li><a href="#projets">Robot SUMO autonome (KiCad & Arduino)</a></li>
+              <li><a href="#projets">Antenne & réception de balise radioélectrique</a></li>
+              <li><a href="#projets">Thermomètre numérique traversant</a></li>
+              <li><a href="#experiences">Modules opto-électroniques AeroDIODE</a></li>
+            </ul>
+          </article>
+
+          <!-- C2 : Vérifier -->
+          <article class="offer">
+            <div class="offer__top">
+              <div class="circ">
+                <svg viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg>
+              </div>
+              <span class="offer__code">C2</span>
+            </div>
+            <h3>Vérifier</h3>
+            <p>Caractérisation optique et temporelle, métrologie de précision et validation de conformité industrielle selon la norme ISO 9001.</p>
+            <ul class="offer__links">
+              <li><a href="#experiences">Bancs GBF, oscilloscope & spectromètre</a></li>
+              <li><a href="#projets">Mesures et relèvement radiogoniométrique</a></li>
+              <li><a href="#experiences">Rédaction des rapports de test AeroDIODE</a></li>
+              <li><a href="#projets">Acquisition radar Sleepy Bee & Raspberry Pi</a></li>
+            </ul>
+          </article>
+
+          <!-- C3 : Maintenir -->
+          <article class="offer">
+            <div class="offer__top">
+              <div class="circ">
+                <svg viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg>
+              </div>
+              <span class="offer__code">C3</span>
+            </div>
+            <h3>Maintenir</h3>
+            <p>Diagnostic de panne, soudure et retouche CMS sous binoculaire, soudure de fibre optique et optimisation continue des bancs.</p>
+            <ul class="offer__links">
+              <li><a href="#experiences">Remplacement de composants CMS de précision</a></li>
+              <li><a href="#experiences">Soudure et alignement de fibres optiques</a></li>
+              <li><a href="#projets">Débogage matériel & logiciel microcontrôleur</a></li>
+              <li><a href="#experiences">Amélioration continue ISO 9001</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- (04) PROJETS TECHNIQUES DOCUMENTÉS                           -->
+    <!-- ============================================================ -->
+    <section class="section" id="projets" style="background: var(--ash); border-block: 1px solid var(--line);">
+      <div class="wrap">
+        <header class="sh">
+          <span class="sh__l">
+            <span class="sh__ico"><svg viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></span>
+            projets académiques & personnels
+          </span>
+          <span class="sh__line"></span>
+          <span class="sh__r">(04)</span>
+        </header>
+
+        <h2 class="h-lg" style="margin-bottom: 1.5rem;">Du schéma au signal réel.</h2>
+        <p class="lead">Une sélection de systèmes que j'ai conçus, programmés, câblés et testés au cours de ma formation GEII.</p>
+
+        <div class="projects-grid">
+
+          <!-- Projet 1 : Radiogoniométrie -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="../scratch/antenne.png" alt="Challenge de Radiogoniométrie">
+              <span class="project-tag-overlay">Radiogoniométrie & RF · BUT 2</span>
+            </div>
+            <div class="project-content">
+              <h3>Challenge de Radiogoniométrie</h3>
+              <p>Conception et réalisation d'un système complet de détection et localisation directionnelle d'une balise radioélectrique distante. Fabrication de l'antenne directive, étage de conditionnement du signal, carte PCB et traitement embarqué STM32.</p>
+              <div class="project-footer">
+                <div class="project-chips">
+                  <span class="chip">Antennes</span>
+                  <span class="chip">Traitement RF</span>
+                  <span class="chip">STM32 / C</span>
+                  <span class="chip">PCB KiCad</span>
+                </div>
+                <a href="../scratch/projet_radiogoniometrie.html" class="mono" style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+                  dossier complet →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 2 : Robot SUMO -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="../scratch/robot_sumo.png" alt="Robot Sumo Autonome">
+              <span class="project-tag-overlay">Robotique · IUT Vélizy</span>
+            </div>
+            <div class="project-content">
+              <h3>Robot SUMO Autonome</h3>
+              <p>Conception intégrale d'un robot autonome sous contraintes dimensionnelles et réglementaires strictes : routage de la carte de contrôle sous KiCad, capteurs de distance et de bordure, programmation Arduino et stratégie d'arène.</p>
+              <div class="project-footer">
+                <div class="project-chips">
+                  <span class="chip">KiCad PCB</span>
+                  <span class="chip">Arduino C++</span>
+                  <span class="chip">Capteurs IR/US</span>
+                  <span class="chip">Pont en H</span>
+                </div>
+                <span class="mono" style="color: var(--muted);">Projet BUT 1</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 3 : Circuit Board GEII -->
+          <article class="project-card">
+            <div class="project-media" style="background: white; padding: 1.5rem;">
+              <img src="../scratch/circuit_board_geii.svg" alt="Carte électronique GEII" style="object-fit: contain;">
+              <span class="project-tag-overlay">Électronique Numérique</span>
+            </div>
+            <div class="project-content">
+              <h3>Cartes de Conditionnement & Thermomètre</h3>
+              <p>Réalisation d'un thermomètre numérique en technologie traversante, dimensionnement des composants analogiques, étude des datasheets, calculs de dérives thermiques et soudures manuelles soignées.</p>
+              <div class="project-footer">
+                <div class="project-chips">
+                  <span class="chip">Soudure traversante</span>
+                  <span class="chip">Dimensionnement</span>
+                  <span class="chip">Datasheets</span>
+                </div>
+                <span class="mono" style="color: var(--muted);">Validation C1/C2</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 4 : Radar & Bras manipulateur -->
+          <article class="project-card">
+            <div class="project-media" style="background: #061f14; display: flex; align-items: center; justify-content: center;">
+              <div style="font-family: var(--mono); color: var(--laser-bright); font-size: 14px; text-align: center; padding: 2rem;">
+                <div style="font-size: 32px; margin-bottom: 10px;">📡</div>
+                <span>SLEEPY BEE + RASPBERRY PI</span>
+              </div>
+              <span class="project-tag-overlay">Systèmes Embarqués</span>
+            </div>
+            <div class="project-content">
+              <h3>Acquisition Radar & Bras Robotique</h3>
+              <p>Acquisition de signaux radar avec carte Sleepy Bee et interface graphique sur Raspberry Pi. Pilotage de servomoteurs et régulation de position sur un bras manipulateur commandé par microcontrôleur.</p>
+              <div class="project-footer">
+                <div class="project-chips">
+                  <span class="chip">Raspberry Pi</span>
+                  <span class="chip">Sleepy Bee</span>
+                  <span class="chip">I2C / SPI</span>
+                  <span class="chip">Python</span>
+                </div>
+                <span class="mono" style="color: var(--muted);">Projet BUT 2</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- (05) FORMATION ACADÉMIQUE                                    -->
+    <!-- ============================================================ -->
+    <section class="section" id="formation">
+      <div class="wrap">
+        <header class="sh">
+          <span class="sh__l">
+            <span class="sh__ico"><svg viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></span>
+            parcours académique
+          </span>
+          <span class="sh__line"></span>
+          <span class="sh__r">(05)</span>
+        </header>
+
+        <h2 class="h-lg" style="margin-bottom: 3rem;">Excellence scientifique et technique.</h2>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+          <!-- Formation 1 : IUT Bordeaux -->
+          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 2.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; border-left: 4px solid var(--primary);">
+            <div>
+              <span class="mono" style="color: var(--primary); font-weight: 600;">2025 — EN COURS</span>
+              <h3 style="font-size: 1.4rem; color: var(--fg); margin: 0.3rem 0;">BUT GEII, 2<sup>e</sup> et 3<sup>e</sup> année (Parcours ESE)</h3>
+              <p style="color: var(--muted); font-size: 0.95rem;">Université de Bordeaux · IUT de Bordeaux-Gradignan (33)</p>
+              <p style="color: var(--fg-2); font-size: 0.95rem; margin-top: 0.6rem;">Spécialisation Électronique et Systèmes Embarqués · Contrat d'apprentissage chez AeroDIODE.</p>
+            </div>
+            <span class="status">En cours</span>
+          </div>
+
+          <!-- Formation 2 : IUT Vélizy -->
+          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 2.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+            <div>
+              <span class="mono" style="color: var(--muted); font-weight: 600;">2023 — 2025</span>
+              <h3 style="font-size: 1.4rem; color: var(--fg); margin: 0.3rem 0;">BUT GEII, 1<sup>ère</sup> et 2<sup>ème</sup> année</h3>
+              <p style="color: var(--muted); font-size: 0.95rem;">IUT de Vélizy · Université de Versailles Saint-Quentin-en-Yvelines (UVSQ - 78)</p>
+              <p style="color: var(--fg-2); font-size: 0.95rem; margin-top: 0.6rem;">Socle fondamental en génie électrique, informatique industrielle, projet Robot SUMO et lois de l'électronique.</p>
+            </div>
+            <span class="status" style="background: #f1f5f9; color: #475569; border-color: #cbd5e1;">Validé</span>
+          </div>
+
+          <!-- Formation 3 : Lycée Hoche -->
+          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 2.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+            <div>
+              <span class="mono" style="color: var(--muted); font-weight: 600;">JUIN 2023</span>
+              <h3 style="font-size: 1.4rem; color: var(--fg); margin: 0.3rem 0;">Baccalauréat Général · Mention Bien</h3>
+              <p style="color: var(--muted); font-size: 0.95rem;">Lycée Hoche · Versailles (78)</p>
+              <p style="color: var(--fg-2); font-size: 0.95rem; margin-top: 0.6rem;">Spécialités Mathématiques & Physique-Chimie · Option Mathématiques Expertes.</p>
+            </div>
+            <span class="status status--iso">Mention Bien</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- (06) CONTACT & CV                                            -->
+    <!-- ============================================================ -->
+    <section class="contact-section" id="contact">
+      <div class="wrap">
+        <header class="sh">
+          <span class="sh__l">
+            <span class="sh__ico"><svg viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></span>
+            prendre contact
+          </span>
+          <span class="sh__line"></span>
+          <span class="sh__r">(06)</span>
+        </header>
+
+        <div class="contact-card-main">
+          <h2>Discutons de vos projets en électronique et photonique.</h2>
+          <p>
+            Vous recherchez un collaborateur rigoureux pour vos développements en électronique, pilotage de diodes laser ou systèmes embarqués ? N'hésitez pas à me contacter.
+          </p>
+
+          <div class="contact-actions">
+            <a href="mailto:benjamin.cop@etu.u-bordeaux.fr" class="btn-laser btn-laser--lg">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="12" height="10" rx="2"/><path d="M2 5l6 4 6-4"/></svg>
+              <span>benjamin.cop@etu.u-bordeaux.fr</span>
+            </a>
+            <a href="tel:+33651365466" class="ghost" style="padding: 13px 24px; font-size: 16px; border-radius: 30px;">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2h3l1.5 3-1.5 1.5a10 10 0 0 0 5 5L12.5 10l3 1.5V14a1 1 0 0 1-1 1A13 13 0 0 1 2 3a1 1 0 0 1 1-1z"/></svg>
+              <span>06 51 36 54 66</span>
+            </a>
+            <a href="../scratch/CV_Portfolio.pdf" target="_blank" rel="noopener" class="pill" style="padding: 10px 24px 10px 10px;">
+              <span class="pill__icon">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg>
+              </span>
+              <span>Curriculum Vitae (PDF)</span>
+            </a>
+          </div>
+
+          <div class="contact-links-row">
+            <span>📍 Bordeaux / Île-de-France</span>
+            <span>🏢 AeroDIODE (Bègles, 33)</span>
+            <span>🎓 IUT de Bordeaux (Gradignan)</span>
+            <a href="../scratch/index.html">← Retour à la version classique</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER MINIMALISTE VERT                                      -->
+  <!-- ============================================================ -->
+  <footer class="footer">
+    <div class="wrap footer__wrap">
+      <div>
+        <span>(b)cop · portfolio miroir 2026</span>
+        <span style="margin-left: 1rem; color: var(--muted);">Spécialisation Opto-Électronique & Photonique</span>
+      </div>
+      <div>
+        <a href="#top" style="color: var(--primary); font-weight: 600;">retour en haut ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

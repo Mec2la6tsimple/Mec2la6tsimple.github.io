@@ -1,0 +1,1283 @@
+/* =========================================================
+   Benjamin Cop — Portfolio GEII & Opto-Électronique (Version Miroir)
+   Direction Artistique : « Laser Diode Photonics & Swiss Blueprint »
+   Palette : Vert Laser Émeraude, Encre Sombre & Papier Craie
+   ========================================================= */
+
+:root {
+  /* Nuances de Vert Laser & Photonique */
+  --laser-bright: #10b981;     /* Vert laser émetteur diode */
+  --laser-glow: #34d399;       /* Lueur photonique coeur de faisceau */
+  --primary: #15803d;          /* Vert émeraude profond */
+  --primary-dark: #0b3d26;     /* Vert forêt foncé */
+  --laser-subtle: #d1fae5;     /* Vert menthe clair pour badges */
+  
+  /* Nuances Blueprint Papier / Encre */
+  --bone: #f7faf8;             /* Fond craie avec subtile teinte technique */
+  --ink: #041b12;              /* Encre noire végétale profonde */
+  --smoke: #062016;            /* Arrière-plan chambre noire laser */
+  --ash: #ebf3ee;              /* Surface douce */
+  --mist: #bdd3c7;             /* Bordures fines */
+  --line: #d3e4da;             /* Lignes de repère blueprint */
+  --surface: #ffffff;
+
+  --bg: var(--bone);
+  --fg: var(--ink);
+  --fg-2: #123023;
+  --muted: #4b6659;
+
+  --font: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'Geist Mono', Consolas, 'SF Mono', Menlo, Monaco, monospace;
+
+  --maxw: 1200px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section: clamp(70px, 9vw, 130px);
+
+  --r-card: 20px;
+  --r-btn: 24px;
+  --r-pill: 44px;
+  --r-badge: 8px;
+
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --transition: all 0.35s var(--ease);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg-2);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--laser-bright);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: calc(var(--maxw) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.mono {
+  font-family: var(--mono);
+  font-size: 13.5px;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+
+/* ---------- Typographie ---------- */
+.h-lg {
+  font-size: clamp(38px, 5.5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.h-md {
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.lead {
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.5;
+  color: var(--fg-2);
+  max-width: 65ch;
+}
+
+.laser-dot {
+  color: var(--laser-bright);
+  display: inline-block;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+}
+
+/* ---------- Navigation Blueprint ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247, 250, 248, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+  transition: var(--transition);
+}
+
+.nav__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.nav__logo {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav__logo .p {
+  color: var(--muted);
+}
+
+.nav__logo .dot {
+  color: var(--laser-bright);
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav__links a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  position: relative;
+  transition: color 0.2s;
+  padding: 4px 0;
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: var(--primary);
+}
+
+.nav__links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--laser-bright);
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+  border-radius: 2px;
+}
+
+.nav__end {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Badges de Statut Vert Laser */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--laser-subtle);
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--laser-bright);
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.9);
+  animation: pulse-laser 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse-laser {
+  0%, 100% { opacity: 1; transform: scale(1); filter: brightness(1.2); }
+  50% { opacity: 0.35; transform: scale(0.75); filter: brightness(0.8); }
+}
+
+.status--iso {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #6ee7b7;
+}
+
+.status--iso i {
+  background: #059669;
+}
+
+/* Boutons Vert Laser */
+.btn-laser {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--r-btn);
+  padding: 8px 20px;
+  font-size: 14.5px;
+  font-weight: 500;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.2s;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.btn-laser:hover {
+  background: #166534;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+}
+
+.btn-laser--lg {
+  padding: 13px 28px;
+  font-size: 16px;
+  border-radius: 30px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--fg);
+  color: var(--bg);
+  border-radius: var(--r-pill);
+  padding: 6px 20px 6px 6px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: padding 0.3s var(--ease), transform 0.2s;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.pill:hover {
+  padding-right: 25px;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+}
+
+.pill__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--laser-bright);
+  color: white;
+  display: grid;
+  place-items: center;
+  flex: none;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.pill__icon svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  color: var(--fg);
+  border-radius: var(--r-btn);
+  padding: 9px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  background: var(--surface);
+  transition: var(--transition);
+}
+
+.ghost:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+/* ---------- Section Header Pattern (.sh) ---------- */
+.sh {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--mono);
+  font-size: 13.5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2.5rem;
+}
+
+.sh__l {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.sh__ico svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--laser-bright);
+  stroke-width: 2.2;
+}
+
+.sh__line {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  position: relative;
+}
+
+.sh__r {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ---------- Hero Section (00) ---------- */
+.hero {
+  padding: clamp(50px, 8vw, 100px) 0 40px;
+  position: relative;
+}
+
+.hero__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero__badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero__title {
+  margin-bottom: 2.5rem;
+}
+
+.hero__line {
+  display: block;
+  font-size: clamp(48px, 8.5vw, 110px);
+  line-height: 0.92;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  color: var(--fg);
+}
+
+.hero__bottom {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.hero__lead {
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.5;
+  color: var(--fg-2);
+}
+
+.hero__lead strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.hero__ctas {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* ---------- Simulation Diode Laser & Faisceau Photonique ---------- */
+.laser-hud-card {
+  background: var(--smoke);
+  border-radius: var(--r-card);
+  padding: 1.6rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  box-shadow: 0 20px 50px rgba(4, 27, 18, 0.35), inset 0 1px 0 rgba(16, 185, 129, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.laser-canvas {
+  width: 100%;
+  height: 160px;
+  display: block;
+  border-radius: 10px;
+  background: #02120b;
+}
+
+.laser-hud-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(16, 185, 129, 0.15);
+  color: rgba(247, 250, 248, 0.7);
+  font-size: 12.5px;
+}
+
+.laser-hud-footer b {
+  color: var(--laser-bright);
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.laser-hud-emission {
+  color: #6ee7b7;
+}
+
+.laser-hud-status {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.laser-hud-status::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--laser-bright);
+  box-shadow: 0 0 6px var(--laser-bright);
+  animation: pulse-laser 1s infinite ease-in-out;
+}
+
+/* ---------- Marquee Ticker ---------- */
+.marquee {
+  background: var(--ash);
+  border-block: 1px solid var(--line);
+  padding: 14px 0;
+  overflow: hidden;
+  user-select: none;
+  margin: 3rem 0;
+}
+
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: ticker 28s linear infinite;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.marquee__track span {
+  color: var(--fg);
+}
+
+.marquee__track i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--laser-bright);
+  box-shadow: 0 0 6px var(--laser-bright);
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---------- Section Layout ---------- */
+.section {
+  padding: var(--section) 0;
+  position: relative;
+}
+
+.statement {
+  font-size: clamp(24px, 3.2vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+  color: var(--fg);
+  margin-bottom: 3.5rem;
+  max-width: 42ch;
+}
+
+/* ---------- Profil (01) ---------- */
+.profil__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.portrait {
+  position: relative;
+  border-radius: var(--r-card);
+  overflow: hidden;
+  background: var(--ash);
+  box-shadow: 0 15px 40px rgba(4, 27, 18, 0.08);
+  border: 1px solid var(--line);
+}
+
+.portrait img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.6s var(--ease);
+}
+
+.portrait:hover img {
+  transform: scale(1.03);
+}
+
+.portrait figcaption {
+  padding: 14px 18px;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--muted);
+  border-left: 3px solid var(--primary);
+}
+
+/* Stats Counter Grid Vert */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  padding: 1.8rem;
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+}
+
+.stat:hover {
+  border-color: var(--mist);
+  border-bottom-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(4, 27, 18, 0.06);
+}
+
+.stat__v {
+  display: block;
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-family: var(--font);
+}
+
+.stat__v small {
+  font-size: 0.5em;
+  color: var(--laser-bright);
+  margin-left: 3px;
+  font-family: var(--mono);
+}
+
+.stat__l {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.4;
+  display: block;
+}
+
+.infos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.info h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.info ul li {
+  font-size: 14.5px;
+  color: var(--fg);
+  margin-bottom: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.info ul li span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---------- Section Sombre : Expériences AeroDIODE (02) ---------- */
+.section-dark {
+  background: var(--smoke);
+  color: var(--bone);
+  border-block: 1px solid rgba(16, 185, 129, 0.2);
+  position: relative;
+}
+
+.section-dark .sh {
+  color: rgba(247, 250, 248, 0.5);
+}
+
+.section-dark .sh__l {
+  color: var(--laser-bright);
+}
+
+.section-dark .h-lg,
+.section-dark .h-md {
+  color: var(--bone);
+}
+
+.section-dark .sh__line {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+/* Fiche Entreprise AeroDIODE */
+.company-blueprint {
+  background: rgba(2, 18, 11, 0.85);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--r-card);
+  padding: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.company-blueprint::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--laser-bright) 0%, var(--primary) 100%);
+  box-shadow: 0 0 12px var(--laser-bright);
+}
+
+.company-blueprint-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.company-logo-slot {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.company-logo-img {
+  background: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.company-title h3 {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.company-title p {
+  color: rgba(247, 250, 248, 0.6);
+  font-size: 0.95rem;
+}
+
+.company-blueprint-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(247, 250, 248, 0.85);
+  margin-bottom: 2rem;
+  max-width: 85ch;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(16, 185, 129, 0.2);
+}
+
+.feature-box {
+  background: rgba(16, 185, 129, 0.04);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  border-radius: 14px;
+  padding: 1.4rem;
+  transition: var(--transition);
+}
+
+.feature-box:hover {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.feature-box h4 {
+  font-size: 1rem;
+  color: var(--laser-bright);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-box p {
+  font-size: 0.88rem;
+  color: rgba(247, 250, 248, 0.65);
+  line-height: 1.45;
+}
+
+/* Timeline Cards dans la section Sombre */
+.timeline-dark {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(16, 185, 129, 0.25);
+  margin-left: 1rem;
+}
+
+.contract-card-dark {
+  background: rgba(2, 18, 11, 0.9);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-radius: var(--r-card);
+  padding: 2.2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.contract-card-dark:hover {
+  border-color: rgba(16, 185, 129, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(16, 185, 129, 0.08);
+}
+
+.contract-card-dark::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 2.5rem;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--laser-bright);
+  box-shadow: 0 0 0 4px var(--smoke), 0 0 10px var(--laser-bright);
+}
+
+.contract-card-dark-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contract-card-dark-header h3 {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.contract-meta-mono {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  color: rgba(247, 250, 248, 0.6);
+  font-size: 13.5px;
+}
+
+.contract-lead-p {
+  color: rgba(247, 250, 248, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Bouton Déplier / Replier Vert Laser */
+.btn-toggle-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--laser-bright);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 20px;
+  padding: 7px 18px;
+  font-size: 13.5px;
+  font-family: var(--mono);
+  transition: var(--transition);
+}
+
+.btn-toggle-dark:hover {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: var(--laser-bright);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+.btn-toggle-dark svg {
+  transition: transform 0.3s;
+}
+
+.btn-toggle-dark.active svg {
+  transform: rotate(180deg);
+}
+
+.details-drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.details-drawer.open {
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(16, 185, 129, 0.2);
+}
+
+.dark-missions {
+  margin-bottom: 1.5rem;
+}
+
+.dark-missions li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.6rem;
+  color: rgba(247, 250, 248, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.dark-missions li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--laser-bright);
+  font-size: 0.9rem;
+}
+
+.dark-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dark-tag {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #a7f3d0;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* ---------- Compétences (03) : Concevoir, Vérifier, Maintenir ---------- */
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.offer {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  padding: 2.5rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.offer:hover {
+  border-color: var(--laser-bright);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(4, 27, 18, 0.08);
+}
+
+.offer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+.offer__top .circ {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 12px rgba(21, 128, 61, 0.25);
+}
+
+.offer__top .circ svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.offer__code {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.offer h3 {
+  font-size: 1.7rem;
+  color: var(--fg);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.offer p {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin-bottom: 1.8rem;
+  flex: 1;
+}
+
+.offer__links {
+  border-top: 1px solid var(--line);
+  padding-top: 1.2rem;
+}
+
+.offer__links li {
+  margin-bottom: 0.5rem;
+}
+
+.offer__links a {
+  font-size: 14.5px;
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.offer__links a::before {
+  content: "•";
+  color: var(--laser-bright);
+}
+
+.offer__links a:hover {
+  color: var(--primary);
+}
+
+/* ---------- Projets Phares (04) ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(4, 27, 18, 0.08);
+}
+
+.project-media {
+  height: 240px;
+  background: #f1f7f3;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.project-card:hover .project-media img {
+  transform: scale(1.05);
+}
+
+.project-tag-overlay {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(4, 27, 18, 0.88);
+  backdrop-filter: blur(8px);
+  color: #a7f3d0;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.project-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  color: var(--fg);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.project-content p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.project-chips {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--primary-dark);
+  background: var(--ash);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* ---------- Contact Section (05) ---------- */
+.contact-section {
+  padding: var(--section) 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact-card-main {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  padding: 4rem;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(4, 27, 18, 0.05);
+  border-top: 4px solid var(--primary);
+}
+
+.contact-card-main h2 {
+  font-size: clamp(32px, 4vw, 54px);
+  color: var(--fg);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.contact-card-main p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 50ch;
+  margin: 0 auto 2.5rem;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.contact-links-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+.contact-links-row a {
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.contact-links-row a:hover {
+  color: var(--laser-bright);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  background: #f1f6f3;
+}
+
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero__bottom {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .hero__ctas {
+    justify-content: flex-start;
+  }
+  .profil__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .portrait img {
+    height: 360px;
+  }
+  .offers,
+  .projects-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav__links {
+    display: none;
+  }
+  .contact-card-main {
+    padding: 2.5rem 1.5rem;
+  }
+}
